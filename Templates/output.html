@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Analytics Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px;
+            padding-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            background-color: #28a745;
+            border-bottom: 2px solid #fff;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            border-color: #fff;
+        }
+
+        .container {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+
+        .download-button,
+        .go-back-button {
+            margin-top: -35px;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Training Analytics Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>{{ function_name }}</h1>
+            <div>
+                <a href="{{ url_for('download', function_name=function_name) }}"
+                    class="btn btn-primary download-button">Download JSON</a>
+                <a href="{{ url_for('home') }}" class="btn btn-primary go-back-button">Go Back to Home</a>
+            </div>
+        </div>
+
+        <pre id="jsonData" style="white-space: pre-wrap;">{{ output_data | tojson(indent=2) }}</pre>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

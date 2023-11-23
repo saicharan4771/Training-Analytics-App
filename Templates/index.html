@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Training Analytics Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px;
+            padding-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            background-color: #28a745;
+            border-bottom: 2px solid #fff;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            border-color: #fff;
+        }
+
+        .container {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+        .text-danger {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Training Analytics Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+
+        <form action="/completed_trainings_count" method="post" enctype="multipart/form-data"
+            onsubmit="return validateForm('file1', 'file1-error-message')">
+            <div class="mb-3">
+                <label for="file1" class="form-label">Completed Trainings Count</label>
+                <input class="form-control" type="file" name="file" id="file1" accept=".json">
+                <small id="file1-error-message" class="text-danger"></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Completed Trainings Count</button>
+        </form>
+        <p>{{ check_message }}</p>
+
+        <form action="/specified_trainings_completed" method="post" enctype="multipart/form-data" class="mt-4"
+            onsubmit="return validateForm('file2', 'file2-error-message')">
+            <div class="mb-3">
+                <label for="file2" class="form-label">Specified Trainings Completed</label>
+                <input class="form-control" type="file" name="file" id="file2" accept=".json">
+                <small id="file2-error-message" class="text-danger"></small>
+            </div>
+            <div class="mb-3">
+                <label for="trainings" class="form-label">Enter trainings (comma-separated): </label>
+                <input type="text" class="form-control" name="trainings" id="trainings">
+            </div>
+            <div class="mb-3">
+                <label for="fiscal_year" class="form-label">Enter fiscal year (YYYY): </label>
+                <input type="text" class="form-control" name="fiscal_year" id="fiscal_year">
+            </div>
+            <button type="submit" class="btn btn-primary">Get Specified Trainings Completed</button>
+        </form>
+        <p>{{ check_message }}</p>
+
+        <form action="/expired_trainings" method="post" enctype="multipart/form-data" class="mt-4"
+            onsubmit="return validateForm('file3', 'file3-error-message')">
+            <div class="mb-3">
+                <label for="file3" class="form-label">Expired Trainings</label>
+                <input class="form-control" type="file" name="file" id="file3" accept=".json">
+                <small id="file3-error-message" class="text-danger"></small>
+            </div>
+            <div class="mb-3">
+                <label for="expiration_date" class="form-label">Select expiration date: </label>
+                <input type="date" class="form-control" name="expiration_date" id="expiration_date">
+            </div>
+            <button type="submit" class="btn btn-primary">Get Expired Trainings</button>
+        </form>
+        <p>{{ check_message }}</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        function validateForm(fileId, errorMessageId) {
+            var fileInput = document.getElementById(fileId);
+            var errorMessage = document.getElementById(errorMessageId);
+
+            if (fileInput.files.length === 0) {
+                errorMessage.textContent = "Please upload a JSON file.";
+                return false;
+            } else {
+                errorMessage.textContent = "";
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
