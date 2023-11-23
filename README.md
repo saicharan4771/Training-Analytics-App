@@ -28,7 +28,7 @@ This application is designed to fulfill the programming exercise for the Applica
 1. Clone the repository:**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/Training-Analytics-App.git
+   git clone https://github.com/saicharan4771/Training-Analytics-App.git
    cd Training-Analytics-App
 
 2. Activate the virtual environment:
