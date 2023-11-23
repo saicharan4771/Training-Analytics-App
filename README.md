@@ -8,14 +8,20 @@ This application is designed to fulfill the programming exercise for the Applica
 
 - **Task 1: Completed Trainings Count**
   - List each completed training with a count of how many people have completed that training.
+    <img width="1470" alt="image" src="https://github.com/saicharan4771/Training-Analytics-App/assets/51474996/4825bc0b-8f04-458b-8e77-5bc6ffb3ed68">
+
 
 - **Task 2: Specified Trainings Completed**
   - Given a list of trainings and a fiscal year, list all people that completed that training in the specified fiscal year.
   - Parameters: Trainings = "Electrical Safety for Labs", "X-Ray Safety", "Laboratory Safety Training"; Fiscal Year = 2024.
+  - <img width="1470" alt="image" src="https://github.com/saicharan4771/Training-Analytics-App/assets/51474996/1446ac53-5c01-4da6-9bfa-dac2ee0d746b">
+
 
 - **Task 3: Expired Trainings**
   - Given a date, find all people that have any completed trainings that have already expired or will expire within one month of the specified date.
   - Use date: Oct 1st, 2023.
+  - <img width="1470" alt="image" src="https://github.com/saicharan4771/Training-Analytics-App/assets/51474996/df4a3afa-e642-4250-b5e3-00e5e60838a6">
+
 
 ## Requirements
 
