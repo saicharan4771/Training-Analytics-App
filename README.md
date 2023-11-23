@@ -19,14 +19,14 @@ The Training Analytics App is a versatile tool that efficiently analyzes trainin
     
 
 - **Task 2: Specified Trainings Completed**
-  - Given a list of trainings and a fiscal year, list all people that completed that training in the specified fiscal year.
+  - Given a list of trainings and a fiscal year, lists all people that completed that training in the specified fiscal year. Users can input parameters directly through the application interface.
   - Parameters: Trainings = "Electrical Safety for Labs", "X-Ray Safety", "Laboratory Safety Training"; Fiscal Year = 2024.
     <img width="1145" alt="image" src="https://github.com/saicharan4771/Training-Analytics-App/assets/51474996/c83cf5ab-fca4-4857-9fbf-6b6082494962">
     <img width="1470" alt="image" src="https://github.com/saicharan4771/Training-Analytics-App/assets/51474996/1446ac53-5c01-4da6-9bfa-dac2ee0d746b">
 
 
 - **Task 3: Expired Trainings**
-  - Given a date, find all people that have any completed trainings that have already expired or will expire within one month of the specified date.
+  - Given a date, finds all people with completed trainings that have expired or will expire within one month of the specified date. Includes an additional field indicating expired vs. expires soon.
   - Use date: Oct 1st, 2023.
     <img width="1141" alt="image" src="https://github.com/saicharan4771/Training-Analytics-App/assets/51474996/d0ca0e68-d4a2-4b36-a63f-18cc19f873db">
     <img width="1470" alt="image" src="https://github.com/saicharan4771/Training-Analytics-App/assets/51474996/df4a3afa-e642-4250-b5e3-00e5e60838a6">
