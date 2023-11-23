@@ -48,6 +48,7 @@ This application is designed to fulfill the programming exercise for the Applica
 
 
 6. Output Files
-completed_trainings_count.json
-specified_trainings_completed.json
-expired_trainings.json
+   ```bash
+    completed_trainings_count.json
+    specified_trainings_completed.json
+    expired_trainings.json
