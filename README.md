@@ -25,25 +25,29 @@ This application is designed to fulfill the programming exercise for the Applica
 
 ## How to Run
 
-1. **Clone the repository:**
+1. Clone the repository:**
 
    ```bash
    git clone https://github.com/YOUR_USERNAME/Training-Analytics-App.git
    cd Training-Analytics-App
 
-2. **Install dependencies:**
+2. Activate the virtual environment:
+   ```bash
+      source venv/bin/activate
+3. Install dependencies:**
    
-```bash
-pip install -r requirements.txt
+   ```bash
+      pip3 install -r requirements.txt
 
-3. **Run the application:**
+4. Run the application:**
+   ```bash
+      python3 app.py
+5. Open your web browser and navigate to http://127.0.0.1:5000/.
 
-bash
-Copy code
-python app.py
-Open your web browser and navigate to http://127.0.0.1:5000/.
 
-Output Files
+
+
+6. Output Files
 completed_trainings_count.json
 specified_trainings_completed.json
 expired_trainings.json
