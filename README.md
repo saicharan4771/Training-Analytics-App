@@ -1,25 +1,49 @@
-# Training Analytics Application
-
-This repository contains the source code for a small web application that performs analytics on training data. The application is built using Flask, a web framework for Python.
+# Training Analytics App
 
 ## Overview
 
-The application is designed to handle data in a specific JSON format. It provides three main functionalities as specified in the exercise:
+This application is designed to fulfill the programming exercise for the Application Developer position at the University of Illinois Urbana-Champaign.
 
-### Completed Trainings Count
-Lists each completed training along with a count of how many people have completed that training.
+## Features
 
-### Specified Trainings Completed
-Given a list of trainings and a fiscal year, it lists all people who completed those trainings in the specified fiscal year.
+- **Task 1: Completed Trainings Count**
+  - List each completed training with a count of how many people have completed that training.
 
-### Expired Trainings
-Given a date, finds all people with completed trainings that have already expired or will expire within one month of the specified date. It includes an additional field to indicate whether a training has expired or will expire soon.
+- **Task 2: Specified Trainings Completed**
+  - Given a list of trainings and a fiscal year, list all people that completed that training in the specified fiscal year.
+  - Parameters: Trainings = "Electrical Safety for Labs", "X-Ray Safety", "Laboratory Safety Training"; Fiscal Year = 2024.
 
-## Usage
+- **Task 3: Expired Trainings**
+  - Given a date, find all people that have any completed trainings that have already expired or will expire within one month of the specified date.
+  - Use date: Oct 1st, 2023.
 
-Follow the steps below to run the application:
+## Requirements
 
-1. Clone this repository to your local machine.
+- The app should work with any data in the specified format.
+- The app should be checked into a publicly accessible GitHub repository.
+- The repository should contain the application code and three output JSON files.
+
+## How to Run
+
+1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/saicharan4771/Training-Analytics-App.git
+   git clone https://github.com/YOUR_USERNAME/Training-Analytics-App.git
+   cd Training-Analytics-App
+
+   Install dependencies:
+
+```bash
+Copy code
+pip install -r requirements.txt
+Run the application:
+
+bash
+Copy code
+python app.py
+Open your web browser and navigate to http://127.0.0.1:5000/.
+
+Output Files
+completed_trainings_count.json
+specified_trainings_completed.json
+expired_trainings.json
