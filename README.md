@@ -31,12 +31,12 @@ This application is designed to fulfill the programming exercise for the Applica
    git clone https://github.com/YOUR_USERNAME/Training-Analytics-App.git
    cd Training-Analytics-App
 
-   Install dependencies:
-
+2. **Install dependencies:**
+   
 ```bash
-Copy code
 pip install -r requirements.txt
-Run the application:
+
+3. **Run the application:**
 
 bash
 Copy code
