@@ -2,7 +2,13 @@
 
 ## Overview
 
-This application is designed to fulfill the programming exercise for the Application Developer position at the University of Illinois Urbana-Champaign.
+The Training Analytics App is a versatile tool that efficiently analyzes training data. It provides a user-friendly interface to:
+
+- **Download JSON:** Easily obtain the generated JSON output for further analysis.
+- **Back to Home Feature:** Navigate back to the home page with a single click for a seamless user experience.
+- **Versatile Functionality:** Works with any data in the specified format, ensuring adaptability to diverse datasets.
+- **Comprehensive Testing:** Clear and effective coverage of all test cases, assuring the application's reliability.
+
 
 ## Features
 
